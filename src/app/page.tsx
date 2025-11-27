@@ -9,8 +9,8 @@ export default function Home() {
 
 	const currentOrder = orderQueue
 		? orderQueue.reduce((lowest, current) =>
-				current.order_id < lowest.order_id ? current : lowest,
-			)
+			current.order_id < lowest.order_id ? current : lowest,
+		)
 		: null;
 
 	return (
@@ -44,7 +44,7 @@ export default function Home() {
 
 				{/* Display the full queue */}
 				<div className="mt-8 w-full max-w-md text-center">
-					<h2 className="mb-4 text-center text-2xl text-[#fedb10]">Full Kö:</h2>
+					<h2 className="mb-4 text-center text-2xl text-[#fedb10]">Hela Kön:</h2>
 					<ul className="space-y-4">
 						{orderQueue && orderQueue.length > 0 ? (
 							orderQueue.map((order) => (
