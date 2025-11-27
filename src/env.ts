@@ -8,6 +8,11 @@ export const env = createEnv({
 	 */
 	server: {
 		NODE_ENV: z.enum(["development", "test", "production"]),
+		QUICKBUTIK_API_KEY: z.string().min(1, "QUICKBUTIK_API_KEY is required"),
+		QUICKBUTIK_BASE_URL: z
+			.string()
+			.url("QUICKBUTIK_BASE_URL must be a valid URL")
+			.default("https://api.quickbutik.com/v1"),
 	},
 
 	/**
@@ -25,6 +30,8 @@ export const env = createEnv({
 	 */
 	runtimeEnv: {
 		NODE_ENV: process.env.NODE_ENV,
+		QUICKBUTIK_API_KEY: process.env.QUICKBUTIK_API_KEY,
+		QUICKBUTIK_BASE_URL: process.env.QUICKBUTIK_BASE_URL,
 		// NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
 	},
 	/**
