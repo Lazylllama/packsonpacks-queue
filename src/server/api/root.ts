@@ -7,7 +7,7 @@ import { queueRouter } from "./routers/queue";
  * All routers added in /api/routers should be manually added here.
  */
 export const appRouter = createTRPCRouter({
-	queue: queueRouter
+	queue: queueRouter,
 });
 
 // export type definition of API

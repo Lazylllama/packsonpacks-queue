@@ -9,8 +9,8 @@ export default function Home() {
 
 	const currentOrder = orderQueue
 		? orderQueue.reduce((lowest, current) =>
-			current.order_id < lowest.order_id ? current : lowest,
-		)
+				current.order_id < lowest.order_id ? current : lowest,
+			)
 		: null;
 
 	return (
